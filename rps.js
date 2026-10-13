@@ -41,9 +41,9 @@ function playGame(){
             computerScore++;
         }
     }
-    for (let i = 0; i < 5; i++){
-        playRound(getComputerChoice(), getHumanChoice());
-    }
+    // for (let i = 0; i < 5; i++){
+    //     playRound(getComputerChoice(), getHumanChoice());
+    // }
 
     if (humanScore > computerScore){
         console.log("You beat the computer")
