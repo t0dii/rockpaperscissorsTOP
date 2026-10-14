@@ -1,5 +1,3 @@
-const myButton = document.querySelector("#myButton");
-
 function getComputerChoice(){
     const computerValues = ['rock', 'paper', 'scissors'];
     const randomValue = Math.floor(Math.random()* computerValues.length);
@@ -55,5 +53,13 @@ function playGame(){
         console.log("tie")
     }
 }
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button)=>{
+    button.addEventListener("click", (event)=>{
+        const playerChoice = button.id;
+        playRound(getComputerChoice(), getHumanChoice());
+    });
+});
+
 
 playGame();
